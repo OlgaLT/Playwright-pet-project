@@ -5,29 +5,30 @@ This project is a fork of Pay-Now created by [@ShubSi26](https://github.com/Shub
 
 This fork includes automated tests written using Playwright. These tests are designed to verify the functionality of the application and ensure its reliability. My contribution focuses on enhancing the testing coverage with End-to-End (E2E) tests and improving the overall testing process.
 
-The tests are located in the `tests` folder and can be run using the following commands:
-
+The tests are located in the `e2e/tests` folder.
 
 # Pay Now
-
-![](https://github.com/ShubSi26/Pay-Now/blob/main/images/default.jpg)
-Deployment - https://project-paynow.onrender.com/ (_May take loading time upto 30s_)
-
-More images - [Click Here](https://github.com/ShubSi26/Pay-Now/tree/main/images)
 
 > [!WARNING]
 > Don't enter any personal information.
 
 # Technology Used
+`PLAYWRIGHT`
 
-<img src="https://skillicons.dev/icons?i=mongodb,express,react,nodejs,tailwind,vite,ts,js,npm,docker " /> <img src = "https://jwt.io/img/pic_logo.svg" width = 50px> <img src = "https://zod.dev/logo.svg" width = 50px> <img src="https://skillicons.dev/icons?i=playwright"/>
-
-| `mongodb` | `express` | `react` | `nodejs` | `tailwindcss` | `vite` | `typescript` | `javascript` | `Docker` | `JWT` | `ZOD` |`PLAYWRIGHT`|
-| --------- | --------- | ------- | -------- | ------------- | ------ | ------------ | ------------ | -------- | ----- | ----- | ----- |
 
 # Local Setup
 
-- ## By using docker-compose
+  ```bash
+  git clone
+  ```
+
+  In the project folder
+  ```bash
+  npm install
+  npx playwright install
+  ```
+
+## Sart the service using docker-compose
   In Frontend folder, run
   ```bash
   npm run build
@@ -36,25 +37,8 @@ More images - [Click Here](https://github.com/ShubSi26/Pay-Now/tree/main/images)
   ```bash
   docker-compose up --build
   ```
-- ## By using docker
-  Run the following command
-  ```bash
-  docker run -e secret="<yoursecret>" -e databaseurl="<your_mongodb_url>" shubhamdockr/paynow:v2_latest
-  ```
-- ## By CLI
-  ```bash
-  git clone https://github.com/ShubSi26/Pay-Now.git
-  ```
-  In Frontend folder, run
-  ```bash
-  npm run dev
-  ```
-  In backend folder, run
-  ```bash
-  node server.js
-  ```
 
-# Key Features
+# Key Features of Pay Now service
 
 - ## Authentication
   The user can create an account and perform operations such as logging in and signing up. Upon logging in or signing up, the user will be given a JWT key for authentication purposes.

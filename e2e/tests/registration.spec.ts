@@ -27,10 +27,10 @@ test('registration', async ({ page }) => {
     await page.goto('/');
     await pm.onInitialPage.clickCreateAccount();
 
-    await expect(page).toHaveURL(/.*register/);
+    await expect(page).toHaveURL(pm.onRegistrationPage.urlPath);
 
     await pm.onRegistrationPage.fillInRegistrationFormAndClickCreateButton(testEmail, testPasword, testName, testPhoneNumber, testWalletPin);
-    const registrationResponse = await page.waitForResponse('http://localhost:3000/auth/register');
+    const registrationResponse = await page.waitForResponse('/auth/register');
     expect(registrationResponse.ok()).toBeTruthy();
     await expect(page).toHaveURL(/.*home/);
 });
