@@ -8,6 +8,6 @@ export class InitialPage extends BasePage {
     }
 
     async clickCreateAccount() {
-                    await this.page.getByText('Create account').click();
+        await this.page.getByText('Create account').click();
     }
 }
