@@ -1,15 +1,15 @@
 import { Page } from '@playwright/test';
+import { BasePage } from './basePage';
 
-export class RegistrationPage {
+export class RegistrationPage extends BasePage{
     urlPath = '/register#';
 
-    readonly page: Page;
-
     constructor(page: Page) {
-        this.page = page;
-    }
+        super(page)
+     }
 
     private async setEmail(email: string) {
+        await this.getById('sdkfml').fill(email)
         await this.page.getByLabel('Your email').fill(email);
     }
     private async setPassword(password: string) {
@@ -29,7 +29,7 @@ export class RegistrationPage {
     }
 
     /**
-     * Fill in registration form with passed data and click Create account button. All parameres are optional
+     * Fill in registration form with passed data and click Create account button. All parameters are optional
      * @param email
      * @param password - valid value is min 6 characters
      * @param name

@@ -5,6 +5,7 @@
   "description": "This project is a fork of Pay-Now created by [@ShubSi26](https://github.com/ShubSi26) and updated by [@silkdemon](https://github.com/silkdemon).",
   "main": "index.js",
   "scripts": {
+    "init": "npm ci",
     "prepare": "husky"
   },
   "keywords": [],
